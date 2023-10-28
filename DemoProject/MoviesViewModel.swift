@@ -18,7 +18,7 @@ final class MoviesViewModel {
             self.eventHandler?(.stopLoading)
             switch response {
             case .success(let movies):
-                self.movies = movies
+                self.movies = movies.Search
                 self.eventHandler?(.dataLoaded)
             case .failure(let error):
                 self.eventHandler?(.error(error))

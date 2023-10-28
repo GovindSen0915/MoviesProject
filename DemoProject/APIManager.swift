@@ -14,7 +14,7 @@ enum DataError: Error {
     case network(Error?)
 }
 
-typealias Handler = (Result<[Movie], DataError>) -> Void
+typealias Handler = (Result<MoviesModel, DataError>) -> Void
 
 final class APIManager {
     
@@ -37,7 +37,7 @@ final class APIManager {
             }
             
             do {
-                let products = try JSONDecoder().decode([Movie].self, from: data)
+                let products = try JSONDecoder().decode(MoviesModel.self, from: data)
                 completion(.success(products))
             } catch {
                 completion(.failure(.network(error)))
