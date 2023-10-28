@@ -12,11 +12,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var viewModel = MoviesViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configuration()
-
+        
     }
 }
 
