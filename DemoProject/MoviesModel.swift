@@ -8,9 +8,9 @@
 import Foundation
 
 struct MoviesModel: Decodable {
-    let Search: [Movie]
+    let search: [Movie]
     let totalResults: String
-    let Response: String
+    let response: String
     
 }
 
@@ -23,6 +23,10 @@ struct Movie: Decodable {
 }
 
 enum CodingKeys: String, CodingKey {
+    
+    case search = "Search"
+    case totalResults = "totalResults"
+    case response = "Response"
     case title = "Title"
     case year = "Year"
     case imdbID = "imdbID"
