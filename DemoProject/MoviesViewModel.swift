@@ -9,7 +9,7 @@ import Foundation
 
 final class MoviesViewModel {
     
-    var movies: MoviesModel = []
+    var movies: [Movie] = []
     var eventHandler: ((_ event: Event) -> Void)?
     
     func fetchMovies() {

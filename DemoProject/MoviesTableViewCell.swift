@@ -14,7 +14,7 @@ class MoviesTableViewCell: UITableViewCell {
     @IBOutlet weak var HeadingLabel: UILabel!
     @IBOutlet weak var subHeadingLable: UILabel!
     
-    var movie: MoviesModel? {
+    var movie: Movie? {
         didSet { // Property Observer
             self.movieDetailConfiguration()
             
