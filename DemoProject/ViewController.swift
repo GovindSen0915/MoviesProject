@@ -15,7 +15,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.tableView.dataSource = self
         self.configuration()
 
     }
@@ -56,7 +55,7 @@ extension ViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.viewModel.movies.count
     }

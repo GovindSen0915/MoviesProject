@@ -20,11 +20,6 @@ class MoviesTableViewCell: UITableViewCell {
             
         }
     }
-
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//
-//    }
     
     func movieDetailConfiguration() {
         guard let movie else { return }
