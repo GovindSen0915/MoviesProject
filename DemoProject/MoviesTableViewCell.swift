@@ -25,7 +25,7 @@ class MoviesTableViewCell: UITableViewCell {
         guard let movie else { return }
         HeadingLabel.text = movie.title
         subHeadingLable.text = movie.year
-        moviesImageView.setImage(with: movie.year ?? "")
+        moviesImageView.setImage(with: movie.poster ?? "noImageAvailable")
     }
     
     
